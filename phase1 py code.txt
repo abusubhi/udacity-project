@@ -1,0 +1,457 @@
+import turtle
+amy = turtle.Turtle()
+amy.color("yellow")
+for side in [1, 2, 3, 4 , 5, 6, 7, 8]:
+    amy.forward(100)
+    amy.right(135)
+
+
+
+*****************************************************************
+
+import turtle
+fred = turtle.Turtle()
+fred.color("red")
+fred.forward(100)
+fred.right(100)
+fred.forward(140)
+fred.right(135)
+fred.forward(100)
+
+
+**********************************************************************
+import turtle
+amy = turtle.Turtle()
+amy.color("yellow")
+
+#amy.width(5)
+#amy.speed(5)
+amy.forward(100)
+amy.right(90)
+#amy.penup()
+amy.forward(100)
+amy.right(90)
+#amy.pendown()
+amy.forward(100)
+amy.right(90)
+amy.forward(100)
+
+#comment in python
+
+************************************************************************
+
+
+import turtle
+amy = turtle.Turtle()
+
+amy.color("red")
+amy.forward(100)
+amy.right(90)
+amy.color("orange")
+amy.forward(100)
+amy.right(90)
+amy.color("yellow")
+amy.forward(100)
+amy.right(90)
+amy.color("green")
+amy.forward(100)
+
+***************************************************************************
+
+
+import turtle
+mary = turtle.Turtle()
+lovely_color = "purple"
+mary.color(lovely_color)
+for side in [1, 2, 3, 4, 5]:
+    mary.forward(100)
+    mary.right(72)
+
+************************************************************************
+
+import turtle
+amy = turtle.Turtle()
+amy.color("cyan")
+
+for item in [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]:
+    amy.forward(50)
+    amy.right(30)
+
+
+*************************************************************************
+
+import turtle
+
+links = [1, 2, 3, 4, 5, 6, 7, 8]
+sides = [1, 2, 3, 4, 5, 6]
+
+weaver = turtle.Turtle()
+weaver.width(5)
+weaver.color('orange')
+
+# Move back so the chain is centered.
+weaver.penup()
+weaver.back(80)
+weaver.pendown()
+
+for link in links:
+    # Draw a hexagon.
+    for side in sides:
+        weaver.forward(10)
+        weaver.right(60)
+
+    # Scoot over to the next link.
+    weaver.penup()
+    weaver.forward(20)
+    weaver.pendown()
+
+weaver.hideturtle()
+
+********************************************************************
+
+import turtle
+amy = turtle.Turtle()
+
+# Make the width thicker so that the line will be easier to see
+amy.width(5)
+
+# Move back without drawing anything
+amy.penup()
+amy.back(140)
+amy.pendown()
+
+# Draw a red line
+amy.color("red")
+amy.forward(50)
+
+# Move forward without drawing anything
+amy.penup()
+amy.forward(50)
+amy.pendown()
+
+# Draw an orange line
+amy.color("orange")
+amy.forward(50)
+
+# Move forward without drawing anything
+amy.penup()
+amy.forward(50)
+amy.pendown()
+
+# Draw a yellow line
+amy.color("yellow")
+amy.forward(50)
+
+*********************************************************************************
+
+import turtle
+
+amy = turtle.Turtle()
+
+# Make the width thicker so that the line will be easier to see
+amy.width(5)
+
+# Move back without drawing anything
+amy.penup()
+amy.back(140)
+amy.pendown()
+
+# Draw three shapes of different colors, with space in between
+for prettycolor in ["red", "orange", "yellow"]:
+    amy.color(prettycolor)
+    for side in [1, 2, 3, 4]:
+        amy.forward(50)
+        amy.right(90)
+    amy.penup()
+    amy.forward(100)
+    amy.pendown()
+
+**************************************************************************
+
+import turtle
+
+# Let's draw a hundred-sided polygon!
+# But this way is silly ...
+sides = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+
+t = turtle.Turtle()
+t.color("magenta")
+t.width(5)
+
+for side in sides:
+    t.forward(5)
+    t.right(360 / 100)
+
+# Rewrite the above code to use range().
+# (When you're done you should be able
+# to delete the giant list!)
+
+************************************************************************
+
+import turtle
+
+t = turtle.Turtle()
+t.color("cyan")
+for n in range(100):
+    t.forward(n)
+    t.right(20)
+
+
+***************************************************************
+
+
+import turtle
+
+# Write a function here that creates a
+# turtle and draws a shape with it.
+def triangle_boogie(color, start):
+  t = turtle.Turtle()
+  t.color(color)
+  t.speed(0)
+  t.width(5)
+  t.right(start)
+  for shape in range(6):
+    for side in range(3):
+      t.forward(100)
+      t.right(120)
+    t.right(15)
+  t.hideturtle()
+
+# Call that function three times.
+triangle_boogie("red", 0)
+triangle_boogie("orange", 120)
+triangle_boogie("blue", 240)
+
+
+************************************************************
+
+
+import turtle
+
+# This code works!
+
+def balloon(t, color):
+    t.speed(0)
+    t.color(color)
+
+    # Draw balloon body.
+    for side in range(30):
+        t.forward(10)
+        t.left(12)
+
+    # Draw balloon knot.
+    t.right(60)
+    for side in range(3):
+      t.forward(10)
+      t.right(120)
+
+    # Draw balloon string.
+    t.color("gray")
+    t.right(30)
+    t.forward(100)
+
+
+t = turtle.Turtle()
+
+t.penup()
+t.back(100)
+t.pendown()
+balloon(t, "red")
+
+t.penup()
+t.home()
+t.pendown()
+balloon(t, "blue")
+
+t.penup()
+t.home()
+t.forward(100)
+t.pendown()
+balloon(t, "purple")
+
+t.hideturtle()
+
+*********************************************************************
+
+
+# This code draws three yellow flowers.
+# Change it so the third flower is green.
+# You don't need to change the 'petal' or
+# 'flower' functions.
+
+import turtle
+
+def flower(tur):
+    # This flower has 12 petals.
+    for p in range(12):
+        petal(tur)
+ 
+def petal(tle):
+    # Draw a long narrow petal.
+    tle.forward(36)
+    tle.right(60)
+    tle.forward(12)
+    tle.right(90)
+    tle.forward(12)
+    tle.right(60)
+    tle.forward(36)
+
+mellie = turtle.Turtle()
+mellie.speed(0)
+mellie.width(2)
+mellie.penup()
+mellie.back(100)
+mellie.pendown()
+
+mellie.color("yellow")
+for bloom in range(3):
+    flower(mellie)
+    mellie.penup()
+    mellie.forward(100)
+    mellie.pendown()
+
+
+************************************************************
+
+
+# This program draws a string of beads.
+# Change it so that the beads' colors
+# alternate:  red, blue, red, blue ...
+
+import turtle
+
+def bead(tur):
+    tur.right(75)
+    for _ in range(12):
+        tur.forward(10)
+        tur.left(30)
+    tur.left(75)
+
+t = turtle.Turtle()
+t.speed(0)
+t.width(2)
+
+# Move to the left before starting.
+t.penup()
+t.back(200)
+t.pendown()
+
+# Draw ten beads.
+for n in range(10):
+    if n == 5:
+        t.color("blue")
+    else:
+        t.color("red")
+    bead(t)
+    t.forward(40)
+
+************************************************************************
+
+import turtle
+t = turtle.Turtle()
+t.width(5)
+t.color("limegreen")
+
+for step in range(21):
+  t.forward(10)  # just one!
+
+  # Alternate turning left and right.
+  if step % 2 == 0:
+    t.left(90)
+  else:
+    t.right(90)
+
+t.hideturtle()
+
+*******************************************************************************
+
+import turtle
+
+def polygon(sides, length):
+  t = turtle.Turtle()
+  t.color("lime")
+  t.speed(0)
+  angle = 360 / sides
+  for side in range(sides):
+    t.forward(length)
+    t.right(angle)
+  t.hideturtle()
+
+polygon(3, 35)
+
+
+*********************************************************************************
+
+import turtle
+
+def temperature_color(temp):
+    # Change this code!
+    if temp < 20:
+        return "blue"
+    return "green"
+
+def draw_temperature(temp):
+    t = turtle.Turtle()
+    t.penup()
+    t.back(100)
+    t.width(20)
+    t.pendown()
+    for n in range(temp):
+        t.color(temperature_color(n))
+        t.forward(1)
+
+def draw_therm_box():
+    t = turtle.Turtle()
+    t.speed(0)
+    t.color("gray")
+    t.penup()
+    t.back(120)
+    t.pendown()
+    t.left(90)
+    for side in [20, 240, 40, 240, 20]:
+        t.forward(side)
+        t.right(90)
+    t.hideturtle()
+
+draw_therm_box()
+draw_temperature(120)
+
+
+****************************************************************************
+
+def in_bounds(x, y):
+    # Change the next line!
+    return True
+
+rainbow = ["red", "orange", "yellow",
+           "green", "blue", "purple"]
+
+import turtle
+import random
+
+t = turtle.Turtle()
+t.speed(0)
+t.width(5)
+t.color(random.choice(rainbow))
+
+for step in range(400):
+    t.forward(30)
+    t.right(random.randint(-45, 45))
+    if not in_bounds(t.xcor(), t.ycor()):
+        # We're going out of bounds!
+        # Move the turtle home and pick
+        # a new direction and color.
+        t.penup()
+        t.home()
+        t.pendown()
+        t.right(random.randint(0, 360))
+        t.color(random.choice(rainbow))
+****************************************************************************
+
+
+
+
+
+
+
+
